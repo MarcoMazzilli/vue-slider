@@ -20,6 +20,7 @@
     <!-- immagini piccole -->
     <div class="carousel-container-small">
       
+      <img v-for="index in imageList" :src="index" class="image-box-small" alt="">
       
     </div>
   </div>
@@ -29,11 +30,7 @@
       <!-- contanitore immagini -->
       <div class="carousel-container">
 
-        <!--Vue.js-->
-        <div>
           <img :src="imageList[index]">
-
-        </div>
 
       </div>
 
