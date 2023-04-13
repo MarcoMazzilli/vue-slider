@@ -12,7 +12,7 @@
 <body>
 
   <header>
-    <h1>Carousel Photo</h1>
+    <h1>{{message}}</h1>
   </header>
 
   <div class="container-small">
@@ -23,7 +23,6 @@
       
     </div>
   </div>
-  
   <main>
     <div class="container">
 
@@ -31,7 +30,7 @@
       <div class="carousel-container">
 
         <!--Vue.js-->
-        <div id="app">
+        <div>
           <img :src="imageList[index]">
 
         </div>
@@ -39,8 +38,8 @@
       </div>
 
         <!-- button -->
-        <div @click="increaseDecrase" id="next" class="btn">&UpArrow;</div>
-        <div  id="prev" class="btn">&downarrow;</div>
+        <div v-show="showButton" @click="increaseDecrase(true)" id="next" class="btn">&UpArrow;</div>
+        <div v-show="showButton" @click="increaseDecrase(false)" id="prev" class="btn">&downarrow;</div>
 
     </div>
 

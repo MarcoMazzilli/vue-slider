@@ -12,14 +12,23 @@ createApp({
         'assets/img/04.webp',
         'assets/img/05.webp',
       ],
-      index : 0
+      index : 0,
+      showButton : true,
     }
   },
 
-  methods : {
-  increaseDecrase (){
-    this.index++;
+  methods: {
 
+  increaseDecrase(condition){
+    if(condition){
+      this.index++
+    }
+    else{
+      this.index--
+    }
+    if (this.index === this.imageList.length) this.index = 0
+    if (this.index < 0) this.index = this.imageList.length -1
   },
+
   }
-}).mount('#app')
+}).mount('body')
