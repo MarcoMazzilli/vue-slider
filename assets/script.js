@@ -15,7 +15,7 @@ createApp({
       counter : 0,
       rimuoviOpacity : "show",
       mantieniOpacity : null,
-      flag : false,
+      sliderPlay: null
     }
   },
 
@@ -34,6 +34,16 @@ createApp({
   },
 
   mouseOver(){
-  }
-  }
+    this.sliderPlay = setInterval(()=>{
+      this.counter++
+        if(this.counter === this.imageList.length ) this.counter = 0; 
+
+    },1000)
+  },
+TODO: // FIX THIS SHIT
+   //clearInterval(sliderPlay)
+
+  
+
+  },
 }).mount('body')

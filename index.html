@@ -28,7 +28,7 @@
     <div class="container">
 
       <!-- contanitore immagini -->
-      <div class="carousel-container" @mouseOver="mouseOver()">
+      <div class="carousel-container" @mouseOver="mouseOver()" @mouseOut="clearInterval()">
 
           <img :src="imageList[counter]">
 
