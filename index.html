@@ -19,8 +19,8 @@
     
     <!-- immagini piccole -->
     <div class="carousel-container-small">
-      
-      <img v-for="index in imageList" :src="index" class="image-box-small" alt="">
+
+      <img @click="index = indice" v-for="(nome,indice) in imageList" :src="nome" class="image-box-small" alt="">
       
     </div>
   </div>
