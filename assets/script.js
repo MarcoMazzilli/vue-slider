@@ -20,12 +20,9 @@ createApp({
   methods: {
 
   increaseDecrase(condition){
-    if(condition){
-      this.index++
-    }
-    else{
-      this.index--
-    }
+
+    condition ? this.index++ : this.index--
+    
     if (this.index === this.imageList.length) this.index = 0
     if (this.index < 0) this.index = this.imageList.length -1
   },
