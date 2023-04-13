@@ -51,6 +51,14 @@ img {
 
 .image-box-small {
   width: calc(100% / 5);
+  opacity: .2;
+}
+
+.image-box-small:hover {
+  opacity: 1;
+}
+.show {
+  opacity: 1;
 }
 
 .overlay {

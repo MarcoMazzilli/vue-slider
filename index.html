@@ -20,7 +20,7 @@
     <!-- immagini piccole -->
     <div class="carousel-container-small">
 
-      <img @click="index = indice" v-for="(nome,indice) in imageList" :src="nome" class="image-box-small" alt="">
+      <img v-for="(elemento,indice) in imageList" :src="elemento" class="image-box-small" :class="indice === counter ? rimuoviOpacity : mantieniOpacity" @click="counter = indice, log()">
       
     </div>
   </div>
@@ -28,15 +28,15 @@
     <div class="container">
 
       <!-- contanitore immagini -->
-      <div class="carousel-container">
+      <div class="carousel-container" @mouseOver="mouseOver()">
 
-          <img :src="imageList[index]">
+          <img :src="imageList[counter]">
 
       </div>
 
         <!-- button -->
-        <div v-show="showButton" @click="increaseDecrase(true)" id="next" class="btn">&UpArrow;</div>
-        <div v-show="showButton" @click="increaseDecrase(false)" id="prev" class="btn">&downarrow;</div>
+        <div @click="increaseDecrase(true)" id="next" class="btn">&UpArrow;</div>
+        <div @click="increaseDecrase(false)" id="prev" class="btn">&downarrow;</div>
 
     </div>
 

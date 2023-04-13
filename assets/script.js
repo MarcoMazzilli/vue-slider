@@ -12,8 +12,10 @@ createApp({
         'assets/img/04.webp',
         'assets/img/05.webp',
       ],
-      index : 0,
-      showButton : true,
+      counter : 0,
+      rimuoviOpacity : "show",
+      mantieniOpacity : null,
+      flag : false,
     }
   },
 
@@ -21,16 +23,17 @@ createApp({
 
   increaseDecrase(condition){
 
-    condition ? this.index++ : this.index--
+    condition ? this.counter++ : this.counter--
 
-    if (this.index === this.imageList.length) this.index = 0
-    if (this.index < 0) this.index = this.imageList.length -1
+    if (this.counter === this.imageList.length) this.counter = 0;
+    if (this.counter < 0) this.counter = this.imageList.length -1;
   },
 
   log(){
-    console.log("bravissimo")
-    console.log(this.index)
-    
+    console.log(event)
+  },
+
+  mouseOver(){
   }
   }
 }).mount('body')
